@@ -21,14 +21,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-unstyled">
-                    <li><a href="#">Category Name</a>
+                    <?php foreach ($categorias as $categoria): ?>
+                    <li>
+                        <a href="<?= base_url('categoria/'.$categoria->id.'/'.limpar($categoria->titulo)) ?>"><?= $categoria->titulo ?></a>
                     </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
